@@ -1,0 +1,39 @@
+// Generated using `moon info`, DON'T EDIT IT
+package "hackathon/cookie_parser"
+
+// Values
+pub fn parse_cookie(String) -> Map[String, String]
+
+pub fn parse_cookies_from_headers(Array[(String, String)]) -> Map[String, String]
+
+pub fn parse_set_cookie(String) -> SetCookie?
+
+pub fn serialize_cookie(Map[String, String]) -> String
+
+pub fn serialize_set_cookie(SetCookie) -> String
+
+// Errors
+
+// Types and methods
+pub enum SameSite {
+  Strict
+  Lax
+  None
+}
+
+pub struct SetCookie {
+  name : String
+  value : String
+  mut domain : String?
+  mut path : String?
+  mut expires : String?
+  mut max_age : Int?
+  mut secure : Bool
+  mut http_only : Bool
+  mut same_site : SameSite?
+}
+pub fn SetCookie::new(String, String) -> Self
+
+// Type aliases
+
+// Traits
